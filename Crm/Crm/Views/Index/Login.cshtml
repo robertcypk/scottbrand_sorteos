@@ -1,0 +1,42 @@
+﻿@model Crm.Models.usuario
+@{
+    /**/
+
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+
+@using (Html.BeginForm("Authorize", "Index", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="">Usuario</label>
+        @Html.EditorFor(model => model.usuario1, new { htmlAttributes = new { @class = "form-control input-sm", placeholder = @Html.DisplayNameFor(m => m.usuario1) } } )
+        <div class="pre-icon os-icon os-icon-user-male-circle"></div>
+    </div>
+
+    <div class="form-group">
+        @Html.ValidationMessageFor(model => model.usuario1)
+    </div>
+
+    <div class="form-group">
+        <label for="">Contraseña</label>
+        @Html.EditorFor(model => model.clave, new { htmlAttributes = new { @class = "form-control input-sm", placeholder = @Html.DisplayNameFor(m => m.clave) } } )
+        <div class="pre-icon os-icon os-icon-fingerprint"></div>
+    </div>
+
+    <div class="form-group">
+        @Html.ValidationMessageFor(model => model.clave)
+    </div>
+
+    <div class="form-group">
+        <label class="field-validation-error">@Html.DisplayFor(model => model.LoginErrorMessage)</label>
+    </div>
+
+    <div class="buttons-w">
+        <button class="btn btn-primary" type="submit">Ingresar</button>
+        <div class="form-check-inline">
+            <label class="form-check-label"><input class="form-check-input" type="checkbox">Recordarme</label>
+        </div>
+    </div>
+}
+

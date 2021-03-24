@@ -1,0 +1,40 @@
+﻿Generated model file: Users.edmx.
+Loading metadata from the database took 00:00:00.9551340.
+Generating the model took 00:00:02.0883378.
+Generated model file: Users.edmx.
+Loading metadata from the database took 00:00:00.4491920.
+Generating the model took 00:00:01.5275214.
+Generated model file: Users.edmx.
+Loading metadata from the database took 00:00:00.4668859.
+Generating the model took 00:00:02.5705126.
+Generated model file: Users.edmx.
+Loading metadata from the database took 00:00:00.4483069.
+Generating the model took 00:00:02.9953008.
+Generated model file: Users.edmx.
+Loading metadata from the database took 00:00:00.4693602.
+Generating the model took 00:00:02.9373522.
+Generated model file: Users.edmx.
+Loading metadata from the database took 00:00:00.4894700.
+Generating the model took 00:00:02.8937662.
+Generated model file: Users.edmx.
+Loading metadata from the database took 00:00:00.4290883.
+Generating the model took 00:00:02.7300633.
+Generated model file: Users.edmx.
+Loading metadata from the database took 00:00:00.4428970.
+Generating the model took 00:00:02.9625014.
+Added the connection string to the Web.Config file.
+Writing the .edmx file took 00:00:00.0062089.
+Generated model file: Users.edmx.
+Loading metadata from the database took 00:00:00.4462031.
+Generating the model took 00:00:02.9443834.
+Generated model file: Users.edmx.
+Loading metadata from the database took 00:00:00.4506777.
+Generating the model took 00:00:03.2503077.
+Generated model file: Users.edmx.
+Loading metadata from the database took 00:00:00.4465747.
+Generating the model took 00:00:03.2544497.
+Added the connection string to the Web.Config file.
+Writing the .edmx file took 00:00:00.0063026.
+Generated model file: Users.edmx.
+Loading metadata from the database took 00:00:00.4482996.
+Generating the model took 00:00:03.2019795.

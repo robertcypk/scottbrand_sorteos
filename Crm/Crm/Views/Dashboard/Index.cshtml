@@ -1,0 +1,370 @@
+﻿@model Crm.Models.usuario
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row pt-4">
+    <div class="col-sm-12">
+        <!--START - Grid of tablo statistics-->
+        <div class="element-wrapper">
+            <h6 class="element-header">
+                Resumen de Campañas
+            </h6>
+            <div class="element-content">
+                <div class="tablo-with-chart">
+                    <div class="row">
+                        <div class="col-sm-3 col-xxl-3">
+                            <div class="element-wrapper">
+                                <div class="element-box">
+                                    <div class="el-chart-w">
+                                        <canvas height="120" id="donutChart" width="120"></canvas>
+                                        <div class="inside-donut-chart-label">
+                                            <strong>3.2K</strong><span>Registrados</span>
+                                        </div>
+                                    </div>
+                                    <div class="el-legend">
+                                        <div class="legend-value-w">
+                                            <div class="legend-pin" style="background-color: #6896f9;"></div>
+                                            <div class="legend-value">
+                                                Perú
+                                            </div>
+                                        </div>
+                                        <div class="legend-value-w">
+                                            <div class="legend-pin" style="background-color: #85c751;"></div>
+                                            <div class="legend-value">
+                                                Chile
+                                            </div>
+                                        </div>
+                                        <div class="legend-value-w">
+                                            <div class="legend-pin" style="background-color: #d97b70;"></div>
+                                            <div class="legend-value">
+                                                Colombia
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 col-xxl-5">
+                            <div class="tablos">
+                                <div class="row mb-xl-2 mb-xxl-3">
+                                    <div class="col-sm-6">
+                                        <a class="element-box el-tablo" href="#">
+                                            <div class="label">
+                                                Campañas
+                                            </div>
+                                            <div class="value">
+                                                57
+                                            </div>
+                                            <div class="trending trending-up-basic">
+                                                <span>12%</span><i class="os-icon os-icon-arrow-up2"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a class="element-box el-tablo" href="#">
+                                            <div class="label">
+                                                Inversión
+                                            </div>
+                                            <div class="value">
+                                                $155
+                                            </div>
+                                            <div class="trending trending-down-basic">
+                                                <span>12%</span><i class="os-icon os-icon-arrow-down"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <!--START - Chart Box-->
+                                        <div class="element-box pl-xxl-5 pr-xxl-5">
+                                            <div class="el-tablo bigger highlight bold-label">
+                                                <div class="value">
+                                                    12,537
+                                                </div>
+                                                <div class="label">
+                                                    Visitantes únicos
+                                                </div>
+                                            </div>
+                                            <div class="el-chart-w">
+                                                <canvas height="170px" id="lineChart" width="600px"></canvas>
+                                            </div>
+                                        </div>
+                                        <!--END - Chart Box-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-xxl-4">
+                            <div class="element-wrapper">
+                                <h6 class="element-header">
+                                    Actividad de accesos
+                                </h6>
+                                <div class="element-box-tp">
+                                    <div class="activity-boxes-w">
+                                        <div class="activity-box-w">
+                                            <div class="activity-time">
+                                                10 Min
+                                            </div>
+                                            <div class="activity-box">
+                                                <div class="activity-avatar">
+                                                    <img alt="" src="~/Content/img/avatar1.jpg">
+                                                </div>
+                                                <div class="activity-info">
+                                                    <div class="activity-role">
+                                                        Roberto Palacios
+                                                    </div>
+                                                    <strong class="activity-title">Revisión de Reportes</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="activity-box-w">
+                                            <div class="activity-time">
+                                                2 Hours
+                                            </div>
+                                            <div class="activity-box">
+                                                <div class="activity-avatar">
+                                                    <img alt="" src="~/Content/img/avatar2.jpg">
+                                                </div>
+                                                <div class="activity-info">
+                                                    <div class="activity-role">
+                                                        Arturo Costa R.
+                                                    </div>
+                                                    <strong class="activity-title">Actualización de Campaña</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="activity-box-w">
+                                            <div class="activity-time">
+                                                5 Hours
+                                            </div>
+                                            <div class="activity-box">
+                                                <div class="activity-avatar">
+                                                    <img alt="" src="~/Content/img/avatar3.jpg">
+                                                </div>
+                                                <div class="activity-info">
+                                                    <div class="activity-role">
+                                                        Martin Torres
+                                                    </div>
+                                                    <strong class="activity-title">Cambio de Password</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END - Grid of tablo statistics-->
+    </div>
+</div>
+<div class="row pt-4">
+    <div class="col-sm-12">
+        <!--START - Recent Ticket Comments-->
+        <div class="element-wrapper">
+            <h6 class="element-header">
+                Ultimas campañas registradas
+            </h6>
+            <div class="element-box-tp">
+                <div class="table-responsive">
+                    <table class="table table-padded">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    Campaña
+                                </th>
+                                <th>
+                                    Detalles
+                                </th>
+                                <th class="text-center">
+                                    Registrado
+                                </th>
+                                <th>
+                                    Tipo
+                                </th>
+                                <th>
+                                    Estado
+                                </th>
+                                <th>
+                                    Actions
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <input class="form-control" type="checkbox">
+                                </td>
+                                <td>
+                                    <div class="user-with-avatar">
+                                        <img alt="" src="~/Content/img/avatar1.jpg"><span>John Mayers</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="smaller lighter">
+                                        I have enabled the software for you, you can try now...
+                                    </div>
+                                </td>
+                                <td>
+                                    <span>Today</span><span class="smaller lighter">1:52am</span>
+                                </td>
+                                <td class="text-center">
+                                    <a class="badge badge-success-inverted" href="">Shopping</a>
+                                </td>
+                                <td class="nowrap">
+                                    <span class="status-pill smaller green"></span><span>Active</span>
+                                </td>
+                                <td class="row-actions">
+                                    <a href="#"><i class="os-icon os-icon-grid-10"></i></a><a href="#"><i class="os-icon os-icon-ui-44"></i></a><a class="danger" href="#"><i class="os-icon os-icon-ui-15"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <input class="form-control" type="checkbox">
+                                </td>
+                                <td>
+                                    <div class="user-with-avatar">
+                                        <img alt="" src="~/Content/img/avatar2.jpg"><span>Mike Bishop</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="smaller lighter">
+                                        Please approve this request so we can move...
+                                    </div>
+                                </td>
+                                <td>
+                                    <span>Jan 19th</span><span class="smaller lighter">3:22pm</span>
+                                </td>
+                                <td class="text-center">
+                                    <a class="badge badge-danger-inverted" href="">Cafe</a>
+                                </td>
+                                <td class="nowrap">
+                                    <span class="status-pill smaller red"></span><span>Closed</span>
+                                </td>
+                                <td class="row-actions">
+                                    <a href="#"><i class="os-icon os-icon-grid-10"></i></a><a href="#"><i class="os-icon os-icon-ui-44"></i></a><a class="danger" href="#"><i class="os-icon os-icon-ui-15"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <input class="form-control" type="checkbox">
+                                </td>
+                                <td>
+                                    <div class="user-with-avatar">
+                                        <img alt="" src="~/Content/img/avatar3.jpg"><span>Terry Crews</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="smaller lighter">
+                                        We will need some login credentials to make...
+                                    </div>
+                                </td>
+                                <td>
+                                    <span>Yesterday</span><span class="smaller lighter">7:45am</span>
+                                </td>
+                                <td class="text-center">
+                                    <a class="badge badge-warning-inverted" href="">Restaurants</a>
+                                </td>
+                                <td class="nowrap">
+                                    <span class="status-pill smaller yellow"></span><span>Pending</span>
+                                </td>
+                                <td class="row-actions">
+                                    <a href="#"><i class="os-icon os-icon-grid-10"></i></a><a href="#"><i class="os-icon os-icon-ui-44"></i></a><a class="danger" href="#"><i class="os-icon os-icon-ui-15"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <input class="form-control" type="checkbox">
+                                </td>
+                                <td>
+                                    <div class="user-with-avatar">
+                                        <img alt="" src="~/Content/img/avatar1.jpg"><span>Phil Collins</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="smaller lighter">
+                                        I have enabled the software for you, you can try now...
+                                    </div>
+                                </td>
+                                <td>
+                                    <span>Jan 23rd</span><span class="smaller lighter">2:12pm</span>
+                                </td>
+                                <td class="text-center">
+                                    <a class="badge badge-primary-inverted" href="">Shopping</a>
+                                </td>
+                                <td class="nowrap">
+                                    <span class="status-pill smaller yellow"></span><span>Pending</span>
+                                </td>
+                                <td class="row-actions">
+                                    <a href="#"><i class="os-icon os-icon-grid-10"></i></a><a href="#"><i class="os-icon os-icon-ui-44"></i></a><a class="danger" href="#"><i class="os-icon os-icon-ui-15"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <input class="form-control" type="checkbox">
+                                </td>
+                                <td>
+                                    <div class="user-with-avatar">
+                                        <img alt="" src="~/Content/img/avatar4.jpg"><span>Katy Pilsner</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="smaller lighter">
+                                        I have tried this solution but it does not open...
+                                    </div>
+                                </td>
+                                <td>
+                                    <span>Jan 12th</span><span class="smaller lighter">9:51am</span>
+                                </td>
+                                <td class="text-center">
+                                    <a class="badge badge-danger-inverted" href="">Groceries</a>
+                                </td>
+                                <td class="nowrap">
+                                    <span class="status-pill smaller green"></span><span>Active</span>
+                                </td>
+                                <td class="row-actions">
+                                    <a href="#"><i class="os-icon os-icon-grid-10"></i></a><a href="#"><i class="os-icon os-icon-ui-44"></i></a><a class="danger" href="#"><i class="os-icon os-icon-ui-15"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <input class="form-control" type="checkbox">
+                                </td>
+                                <td>
+                                    <div class="user-with-avatar">
+                                        <img alt="" src="~/Content/img/avatar2.jpg"><span>Wes Morgan</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="smaller lighter">
+                                        I have enabled the software for you, you can try now...
+                                    </div>
+                                </td>
+                                <td>
+                                    <span>Jan 9th</span><span class="smaller lighter">12:45pm</span>
+                                </td>
+                                <td class="text-center">
+                                    <a class="badge badge-primary-inverted" href="">Business</a>
+                                </td>
+                                <td class="nowrap">
+                                    <span class="status-pill smaller yellow"></span><span>Pending</span>
+                                </td>
+                                <td class="row-actions">
+                                    <a href="#"><i class="os-icon os-icon-grid-10"></i></a><a href="#"><i class="os-icon os-icon-ui-44"></i></a><a class="danger" href="#"><i class="os-icon os-icon-ui-15"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--END - Recent Ticket Comments-->
+    </div>
+</div>
+

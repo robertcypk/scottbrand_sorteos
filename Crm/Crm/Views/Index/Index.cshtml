@@ -1,0 +1,290 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PublicLogin.cshtml";
+}
+
+
+<div class="welcome">
+    <div class="scott">
+        <img src="~/Content/assets/images/scott.png" alt="">
+    </div>
+
+    <div class="imagen">
+        <img src="~/Content/assets/images/welcome.png" alt="">
+    </div>
+
+    <div class="read">
+        <a href="#register" class="btn btn-orange modaLink">
+            No tengo cuenta
+        </a>
+
+        <a href="#login" class="btn btn-orange modaLink">
+            Ya tengo cuenta
+        </a>
+    </div>
+
+</div>
+
+<!-- ////registro de usuario -->
+<div id="register" class="modalBox">
+    <div class="main">
+        <div class="wrapper">
+            <div class="close"></div>
+            <div class="heading">
+                <div class="title">
+                    <span>Regístrate</span>
+                </div>
+                <div class="description">
+                    Ingresa tus datos
+                </div>
+            </div>
+            <div class="form">
+                <form action="~/Registro/Participantes" method="post" class="form-register" id="form-register">
+                    <div class="form-cols">
+                        <input type="text" name="nombre" placeholder="Nombre" class="name">
+                    </div>
+                    <div class="form-cols">
+                        <input type="text" name="apellidos" placeholder="Apellidos" class="name">
+                    </div>
+                    <!-- <div class="form-cols form-message"> -->
+                    <!-- Error: El campo DNI es obligatorio -->
+                    <!-- </div> -->
+                    <div class="form-cols">
+                        <input type="number" name="dni" placeholder="DNI / C.E." class="dni">
+                    </div>
+                    <div class="form-cols">
+                        <input type="email" name="email" placeholder="E-mail" class="mail">
+                    </div>
+                    <div class="form-cols form-two">
+                        <div class="item">
+                            <select name="pais" id="pais">
+                                
+
+                            </select>
+                        </div>
+                        <div class="item">
+                            <select name="localidad" id="localidad">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-cols">
+                        <input type="password" name="clave" placeholder="Contraseña" class="password">
+                    </div>
+                    <div class="form-cols form-text text-center">
+                        <input type="checkbox" name="terms" id="terms" value="1">
+                        <a href="#terminos" class="link link-light-blue modaLink">
+                            &nbsp;
+                            Aceptar términos y condiciones
+                        </a>
+                    </div>
+                    <div class="form-cols text-center">
+                        <div class="g-recaptcha" data-sitekey="6Lca00gUAAAAANdFCqOhm_rinXkYZ5TnAJ75R_UK"></div>
+
+                    </div>
+                    <div class="form-cols form-submit">
+                        <input type="submit" id="submit" class="btn btn-orange" value="Crear cuenta">
+                        <div id="msg"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="footer">
+                Al pulsar sobre “Crear cuenta”, acepto el <br>
+                <a href="#contrato" class="link modaLink">Contrato de Licencia de Usuario</a> y las <a href="#politicas" class="link modaLink">Políticas de Privacidad</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /// Confirmación de registro -->
+<div id="registroconfirmado" class="modalBox registroconfirmado">
+    <div class="main">
+        <div class="wrapper info-text .info-confirm">
+            <!-- <div class="close"></div> -->
+            <div class="heading-confirm">
+                <div class="title-confirm">
+                    <span>Te enviamos un mensaje de confirmación al correo registrado</span>
+                </div>
+
+            </div>
+            <div class="content-confirm text-center">
+                <button type="text" class="btn btn-orange BtnClose"> Aceptar</button>
+            </div>
+            <div class="footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //// login de usuario -->
+<div id="login" class="modalBox login">
+    <div class="main">
+        <div class="wrapper">
+            <div class="close"></div>
+            <div class="heading">
+                <div class="title">
+                    <span>Iniciar sesión</span>
+                </div>
+                <div class="description">
+                    Ingresa tus datos
+                </div>
+            </div>
+            <div class="form">
+                <form action="" class="form-login" id="form-login">
+
+                    <div class="form-cols">
+                        <input type="email" name="email" placeholder="E-mail" class="mail">
+                    </div>
+                    <div class="form-cols">
+                        <input type="password" name="password" placeholder="Contraseña" class="password">
+                    </div>
+                    <div class="form-cols text-center">
+                        <input type="submit" id="submitLogin" class="btn btn-orange" value="Ingresar">
+                        <div id="loginMsj"> &nbsp;</div>
+                    </div>
+                    <div class="form-cols text-center">
+                        <a href="#recover" class="link link-light-blue modaLink">
+                            ¿Has olvidado tu contraseña?
+                        </a>
+                    </div>
+                    <div class="form-cols form-facebook">
+                        <a href="#" style="cursor: not-allowed">
+                            Ingresar con Facebook
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div class="footer">
+                <a href="#politicas" class="modaLink">
+                    Políticas de privacidad
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /// Recuperar contraseña -->
+<div id="recover" class="modalBox recover">
+    <div class="main">
+        <div class="wrapper">
+            <div class="close"></div>
+            <div class="heading">
+                <div class="title">
+                    <span>¿Has olvidado tu contraseña?</span>
+                </div>
+                <div class="description">
+                    Ingresa tu correo electrónico
+                </div>
+            </div>
+            <div class="form">
+                <form action="" class="form-password" id="form-password">
+                    <div class="form-cols">
+                        <input type="email" name="email" placeholder="Ingresa tu correo electrónico" class="mail">
+                    </div>
+                    <div class="form-cols text-center">
+                        <input type="submit" id="submitPass" class="btn btn-orange" value="Enviar">
+                        <div id="PassMsj"> &nbsp;</div>
+                    </div>
+                </form>
+            </div>
+            <div class="footer">
+                <!-- <a href=""> -->
+                Verifica tu correo electrónico
+                <!-- </a> -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /// Confirmación de envio de contraseña -->
+<div id="passwordconfirmado" class="modalBox passwordconfirmado">
+    <div class="main">
+        <div class="wrapper info-text .info-confirm">
+            <!-- <div class="close"></div> -->
+            <div class="heading-confirm">
+                <div class="title-confirm">
+                    <span>Te enviamos un mensaje con los datos de tu contraseña al correo registrado</span>
+                </div>
+            </div>
+            <div class="content-confirm text-center">
+                <button type="text" class="btn btn-orange BtnClose"> Aceptar</button>
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /// Terminos y condiciones -->
+<div id="terminos" class="modalBox terminos">
+    <div class="main">
+        <div class="wrapper info-text">
+            <div class="close"></div>
+            <div class="heading-line">
+                <div class="title-normal">
+                    <span>Terminos y Condiciones</span>
+                </div>
+
+            </div>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id bibendum augue, ac bibendum leo. Nunc vel cursus orci. Sed scelerisque diam pulvinar libero posuere finibus. Curabitur laoreet sit amet sapien in tincidunt. In ac augue non ex sodales sagittis. Maecenas accumsan faucibus orci eget ultricies. Nulla ullamcorper euismod neque finibus dapibus. Maecenas non laoreet neque, eget fermentum libero.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id bibendum augue, ac bibendum leo. Nunc vel cursus orci. Sed scelerisque diam pulvinar libero posuere finibus. Curabitur laoreet sit amet sapien in tincidunt. In ac augue non ex sodales sagittis. Maecenas accumsan faucibus orci eget ultricies. Nulla ullamcorper euismod neque finibus dapibus. Maecenas non laoreet neque, eget fermentum libero.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id bibendum augue, ac bibendum leo. Nunc vel cursus orci. Sed scelerisque diam pulvinar libero posuere finibus. Curabitur laoreet sit amet sapien in tincidunt. In ac augue non ex sodales sagittis. Maecenas accumsan faucibus orci eget ultricies. Nulla ullamcorper euismod neque finibus dapibus. Maecenas non laoreet neque, eget fermentum libero.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /// Politicas de privacidad -->
+<div id="politicas" class="modalBox politicas">
+    <div class="main">
+        <div class="wrapper info-text">
+            <div class="close"></div>
+            <div class="heading-line">
+                <div class="title-normal">
+                    <span>Politicas de Privacidad</span>
+                </div>
+
+            </div>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id bibendum augue, ac bibendum leo. Nunc vel cursus orci. Sed scelerisque diam pulvinar libero posuere finibus. Curabitur laoreet sit amet sapien in tincidunt. In ac augue non ex sodales sagittis. Maecenas accumsan faucibus orci eget ultricies. Nulla ullamcorper euismod neque finibus dapibus. Maecenas non laoreet neque, eget fermentum libero.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id bibendum augue, ac bibendum leo. Nunc vel cursus orci. Sed scelerisque diam pulvinar libero posuere finibus. Curabitur laoreet sit amet sapien in tincidunt. In ac augue non ex sodales sagittis. Maecenas accumsan faucibus orci eget ultricies. Nulla ullamcorper euismod neque finibus dapibus. Maecenas non laoreet neque, eget fermentum libero.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id bibendum augue, ac bibendum leo. Nunc vel cursus orci. Sed scelerisque diam pulvinar libero posuere finibus. Curabitur laoreet sit amet sapien in tincidunt. In ac augue non ex sodales sagittis. Maecenas accumsan faucibus orci eget ultricies. Nulla ullamcorper euismod neque finibus dapibus. Maecenas non laoreet neque, eget fermentum libero.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /// Politicas de privacidad -->
+<div id="contrato" class="modalBox contrato">
+    <div class="main">
+        <div class="wrapper info-text">
+            <div class="close"></div>
+            <div class="heading-line">
+                <div class="title-normal">
+                    <span>Contrato de Licencia de Usuario</span>
+                </div>
+
+            </div>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id bibendum augue, ac bibendum leo. Nunc vel cursus orci. Sed scelerisque diam pulvinar libero posuere finibus. Curabitur laoreet sit amet sapien in tincidunt. In ac augue non ex sodales sagittis. Maecenas accumsan faucibus orci eget ultricies. Nulla ullamcorper euismod neque finibus dapibus. Maecenas non laoreet neque, eget fermentum libero.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id bibendum augue, ac bibendum leo. Nunc vel cursus orci. Sed scelerisque diam pulvinar libero posuere finibus. Curabitur laoreet sit amet sapien in tincidunt. In ac augue non ex sodales sagittis. Maecenas accumsan faucibus orci eget ultricies. Nulla ullamcorper euismod neque finibus dapibus. Maecenas non laoreet neque, eget fermentum libero.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id bibendum augue, ac bibendum leo. Nunc vel cursus orci. Sed scelerisque diam pulvinar libero posuere finibus. Curabitur laoreet sit amet sapien in tincidunt. In ac augue non ex sodales sagittis. Maecenas accumsan faucibus orci eget ultricies. Nulla ullamcorper euismod neque finibus dapibus. Maecenas non laoreet neque, eget fermentum libero.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>

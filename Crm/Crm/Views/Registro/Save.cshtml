@@ -1,0 +1,11 @@
+﻿@model Crm.Models.usuario
+@{
+    ViewBag.Title = "Save";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Save</h2>
+
+@Html.DisplayFor(model => model.LoginErrorMessage)
+
+@Html.ActionLink("Registrate", "Create", "Registro", new { area = "" }, new { @class = "navbar-brand" })

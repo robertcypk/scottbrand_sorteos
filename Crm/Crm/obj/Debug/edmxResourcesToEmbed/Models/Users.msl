@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="adminaspModelStoreContainer" CdmEntityContainer="UsersEntities">
+    <EntitySetMapping Name="tbl_campania">
+      <EntityTypeMapping TypeName="adminaspModel.tbl_campania">
+        <MappingFragment StoreEntitySet="tbl_campania">
+          <ScalarProperty Name="idcampania" ColumnName="idcampania" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idpais" ColumnName="idpais" />
+          <ScalarProperty Name="idlocalidad" ColumnName="idlocalidad" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="own" ColumnName="own" />
+          <ScalarProperty Name="bannerdesktop" ColumnName="bannerdesktop" />
+          <ScalarProperty Name="bannermobile" ColumnName="bannermobile" />
+          <ScalarProperty Name="resumen" ColumnName="resumen" />
+          <ScalarProperty Name="preguntasf" ColumnName="preguntasf" />
+          <ScalarProperty Name="video" ColumnName="video" />
+          <ScalarProperty Name="sorteoganadores" ColumnName="sorteoganadores" />
+          <ScalarProperty Name="sorteofechas" ColumnName="sorteofechas" />
+          <ScalarProperty Name="mensaje" ColumnName="mensaje" />
+          <ScalarProperty Name="terminoscond" ColumnName="terminoscond" />
+          <ScalarProperty Name="politicasuso" ColumnName="politicasuso" />
+          <ScalarProperty Name="politicasprivacidad" ColumnName="politicasprivacidad" />
+          <ScalarProperty Name="politicatratdatos" ColumnName="politicatratdatos" />
+          <ScalarProperty Name="productos" ColumnName="productos" />
+          <ScalarProperty Name="fregistro" ColumnName="fregistro" />
+          <ScalarProperty Name="fupdate" ColumnName="fupdate" />
+          <ScalarProperty Name="fini" ColumnName="fini" />
+          <ScalarProperty Name="ffin" ColumnName="ffin" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_canjes">
+      <EntityTypeMapping TypeName="adminaspModel.tbl_canjes">
+        <MappingFragment StoreEntitySet="tbl_canjes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idcampana" ColumnName="idcampana" />
+          <ScalarProperty Name="idpremio" ColumnName="idpremio" />
+          <ScalarProperty Name="puntos" ColumnName="puntos" />
+          <ScalarProperty Name="registro" ColumnName="registro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_codigos">
+      <EntityTypeMapping TypeName="adminaspModel.tbl_codigos">
+        <MappingFragment StoreEntitySet="tbl_codigos">
+          <ScalarProperty Name="idcodigo" ColumnName="idcodigo" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="puntos" ColumnName="puntos" />
+          <ScalarProperty Name="registro" ColumnName="registro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_localidad">
+      <EntityTypeMapping TypeName="adminaspModel.tbl_localidad">
+        <MappingFragment StoreEntitySet="tbl_localidad">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idpais" ColumnName="idpais" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_paises">
+      <EntityTypeMapping TypeName="adminaspModel.tbl_paises">
+        <MappingFragment StoreEntitySet="tbl_paises">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_participantes">
+      <EntityTypeMapping TypeName="adminaspModel.tbl_participantes">
+        <MappingFragment StoreEntitySet="tbl_participantes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="localidad" ColumnName="localidad" />
+          <ScalarProperty Name="puntos" ColumnName="puntos" />
+          <ScalarProperty Name="registro" ColumnName="registro" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_premios">
+      <EntityTypeMapping TypeName="adminaspModel.tbl_premios">
+        <MappingFragment StoreEntitySet="tbl_premios">
+          <ScalarProperty Name="idpremios" ColumnName="idpremios" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idcampania" ColumnName="idcampania" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+          <ScalarProperty Name="puntaje" ColumnName="puntaje" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="registro" ColumnName="registro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_productos">
+      <EntityTypeMapping TypeName="adminaspModel.tbl_productos">
+        <MappingFragment StoreEntitySet="tbl_productos">
+          <ScalarProperty Name="idprod" ColumnName="idprod" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="detalles" ColumnName="detalles" />
+          <ScalarProperty Name="registro" ColumnName="registro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_puntos">
+      <EntityTypeMapping TypeName="adminaspModel.tbl_puntos">
+        <MappingFragment StoreEntitySet="tbl_puntos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idcampana" ColumnName="idcampana" />
+          <ScalarProperty Name="idusr" ColumnName="idusr" />
+          <ScalarProperty Name="idcodigo" ColumnName="idcodigo" />
+          <ScalarProperty Name="puntos" ColumnName="puntos" />
+          <ScalarProperty Name="ownr" ColumnName="ownr" />
+          <ScalarProperty Name="registro" ColumnName="registro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="adminaspModel.usuario">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="idusr" ColumnName="idusr" />
+          <ScalarProperty Name="usuario1" ColumnName="usuario" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+          <ScalarProperty Name="fechaderegistro" ColumnName="fechaderegistro" />
+          <ScalarProperty Name="LoginErrorMessage" ColumnName="LoginErrorMessage" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_insert_usuario" FunctionName="adminaspModel.Store.sp_insert_usuario" />
+    <FunctionImportMapping FunctionImportName="sp_select_usuarios" FunctionName="adminaspModel.Store.sp_select_usuarios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="adminaspModel.sp_select_usuarios_Result">
+          <ScalarProperty Name="idusr" ColumnName="idusr" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+          <ScalarProperty Name="fechaderegistro" ColumnName="fechaderegistro" />
+          <ScalarProperty Name="LoginErrorMessage" ColumnName="LoginErrorMessage" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_registro_participantes" FunctionName="adminaspModel.Store.sp_registro_participantes" />
+  </EntityContainerMapping>
+</Mapping>

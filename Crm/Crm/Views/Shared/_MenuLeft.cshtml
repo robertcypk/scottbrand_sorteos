@@ -1,0 +1,243 @@
+﻿            <!--------------------
+           START - Mobile Menu
+           -------------------->
+            <div class="menu-mobile menu-activated-on-click color-scheme-dark">
+                <div class="mm-logo-buttons-w">
+                    <a class="mm-logo" href="index.html"><img src="~/Content/img/logo-scott.png"><span>BackOffice Scott</span></a>
+                    <div class="mm-buttons">
+                        <div class="content-panel-open">
+                            <div class="os-icon os-icon-grid-circles"></div>
+                        </div>
+                        <div class="mobile-menu-trigger">
+                            <div class="os-icon os-icon-hamburger-menu-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-and-user">
+                    <div class="logged-user-w">
+                        <div class="avatar-w">
+                            <img alt="" src="~/Content/img/avatar1.jpg">
+                        </div>
+                        <div class="logged-user-info-w">
+                            <div class="logged-user-name">
+                               @Session["Nombre"]
+                            </div>
+                            <div class="logged-user-role">
+                                @Session["Rol"]
+                            </div>
+                        </div>
+                    </div>
+                    <!--------------------
+                    START - Mobile Menu List
+                    -------------------->
+                    <ul class="main-menu">
+                        <li class="has-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-window-content"></div>
+                                </div>
+                                <span>Dashboard</span>
+                            </a>
+
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-hierarchy-structure-2"></div>
+                                </div>
+                                <span>Campañas</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">Side Menu Light</a>
+                                </li>
+                                <li>
+                                    <a href="#">Side Menu Dark</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-tasks-checked"></div>
+                                </div>
+                                <span>Resultados</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">Email Application</a>
+                                </li>
+                                <li>
+                                    <a href="#">Support Dashboard <strong class="badge badge-danger">New</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#">Tickets Index <strong class="badge badge-danger">New</strong></a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-grid-squares"></div>
+                                </div>
+                                <span>Opciones</span>
+                            </a>
+                            <ul class="sub-menu">
+
+                                <li>
+                                    <a href="#">Productos</a>
+                                </li>
+                                <li>
+                                    <a href="#">Paises y Ciudades</a>
+                                </li>
+                            </ul>
+                        </li>
+                       
+
+                    </ul>
+                    <!--------------------
+                    END - Mobile Menu List
+                    -------------------->
+
+                </div>
+            </div>
+            <!--------------------
+            END - Mobile Menu
+            -------------------->
+            <!--------------------
+            START - Menu side v2
+            -------------------->
+            <div class="desktop-menu menu-side-v2-w menu-activated-on-hover flying-menu">
+                <ul class="main-menu">
+                    <li class="menu-sub-header">
+                        <span>Herramientas</span>
+                    </li>
+                    <li class="has-menu">
+                        <a href="index.html">
+                            <div class="icon-w">
+                                <div class="os-icon os-icon-window-content"></div>
+                            </div>
+                            <span>Dashboard</span>
+                        </a>
+
+                    </li>
+                    <li class="has-sub-menu">
+                        <a href="#">
+                            <div class="icon-w">
+                                <div class="os-icon os-icon-hierarchy-structure-2"></div>
+                            </div>
+                            <span>Campañas</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">
+                                Campañas
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+
+                                    <li>
+                                        <a href="#">Crear nueva campaña</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Lista de campañas</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="has-sub-menu">
+                        <a href="#">
+                            <div class="icon-w">
+                                <div class="os-icon os-icon-tasks-checked"></div>
+                            </div>
+                            <span>Resultados</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">
+                                Resultados
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">Campañas terminadas</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Partipantes registrados</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Generar Reportes</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-sub-header">
+                        <span>configuración</span>
+                    </li>
+                    <li class="has-sub-menu">
+                        <a href="#">
+                            <div class="icon-w">
+                                <div class="os-icon os-icon-grid-squares"></div>
+                            </div>
+                            <span>Opciones</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">
+                                Opciones
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">Paises y ciudades</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Reporte de accesos</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Políticas de Uso</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="has-sub-menu">
+                        <a href="#">
+                            <div class="icon-w">
+                                <div class="os-icon os-icon-user-male-circle"></div>
+                            </div>
+                            <span>Usuarios</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">
+                                Usuarios
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="@Url.Action("Index", "Registro")">Lista de usuarios</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Create", "Registro")">Registrar usuarios</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="side-menu-magic">
+                    <h4>
+                       Campañas KCC
+                    </h4>
+                    <p>
+                        Crea, personaliza y pública tu campaña de marketing
+                    </p>
+                    <div class="btn-w">
+                        <a class="btn btn-white btn-rounded" href="#" target="_blank">CREAR AHORA</a>
+                    </div>
+                </div>
+            </div>
+            <!--------------------
+            END - Menu side v2
+            -------------------->

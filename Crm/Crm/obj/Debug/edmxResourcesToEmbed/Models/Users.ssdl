@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="adminaspModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_campania">
+    <Key>
+      <PropertyRef Name="idcampania" />
+    </Key>
+    <Property Name="idcampania" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="idpais" Type="int" Nullable="false" />
+    <Property Name="idlocalidad" Type="int" Nullable="false" />
+    <Property Name="tipo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="own" Type="varchar" MaxLength="250" />
+    <Property Name="bannerdesktop" Type="varchar" MaxLength="250" />
+    <Property Name="bannermobile" Type="varchar" MaxLength="250" />
+    <Property Name="resumen" Type="text" />
+    <Property Name="preguntasf" Type="text" />
+    <Property Name="video" Type="text" />
+    <Property Name="sorteoganadores" Type="text" />
+    <Property Name="sorteofechas" Type="text" />
+    <Property Name="mensaje" Type="text" />
+    <Property Name="terminoscond" Type="text" />
+    <Property Name="politicasuso" Type="text" />
+    <Property Name="politicasprivacidad" Type="text" />
+    <Property Name="politicatratdatos" Type="text" />
+    <Property Name="productos" Type="text" />
+    <Property Name="fregistro" Type="datetime" />
+    <Property Name="fupdate" Type="datetime" />
+    <Property Name="fini" Type="datetime" />
+    <Property Name="ffin" Type="datetime" />
+    <Property Name="estatus" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_canjes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idcampana" Type="int" Nullable="false" />
+    <Property Name="idpremio" Type="int" Nullable="false" />
+    <Property Name="puntos" Type="int" Nullable="false" />
+    <Property Name="registro" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_codigos">
+    <Key>
+      <PropertyRef Name="idcodigo" />
+    </Key>
+    <Property Name="idcodigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="puntos" Type="int" Nullable="false" />
+    <Property Name="registro" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_localidad">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idpais" Type="int" Nullable="false" />
+    <Property Name="localidad" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_paises">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pais" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="estatus" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_participantes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="apellidos" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="dni" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="clave" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="imagen" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="pais" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="localidad" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="puntos" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="registro" Type="datetime" Nullable="false" />
+    <Property Name="estatus" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_premios">
+    <Key>
+      <PropertyRef Name="idpremios" />
+    </Key>
+    <Property Name="idpremios" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="idcampania" Type="int" Nullable="false" />
+    <Property Name="imagen" Type="text" />
+    <Property Name="detalle" Type="text" />
+    <Property Name="puntaje" Type="int" />
+    <Property Name="stock" Type="int" />
+    <Property Name="registro" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_productos">
+    <Key>
+      <PropertyRef Name="idprod" />
+    </Key>
+    <Property Name="idprod" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoria" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="imagen" Type="text" />
+    <Property Name="detalles" Type="text" />
+    <Property Name="registro" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_puntos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idcampana" Type="int" Nullable="false" />
+    <Property Name="idusr" Type="int" Nullable="false" />
+    <Property Name="idcodigo" Type="int" Nullable="false" />
+    <Property Name="puntos" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ownr" Type="varchar" MaxLength="250" />
+    <Property Name="registro" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="idusr" />
+    </Key>
+    <Property Name="idusr" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usuario" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="clave" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="apellido" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="rol" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="fechaderegistro" Type="datetime" Nullable="false" />
+    <Property Name="LoginErrorMessage" Type="text" />
+    <Property Name="imagen" Type="varchar" MaxLength="250" />
+    <Property Name="pais" Type="int" />
+    <Property Name="estatus" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <Association Name="FK_tbl_canjes_tbl_campania">
+    <End Role="tbl_campania" Type="Self.tbl_campania" Multiplicity="1" />
+    <End Role="tbl_canjes" Type="Self.tbl_canjes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_campania">
+        <PropertyRef Name="idcampania" />
+      </Principal>
+      <Dependent Role="tbl_canjes">
+        <PropertyRef Name="idcampana" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_canjes_tbl_premios">
+    <End Role="tbl_premios" Type="Self.tbl_premios" Multiplicity="1" />
+    <End Role="tbl_canjes" Type="Self.tbl_canjes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_premios">
+        <PropertyRef Name="idpremios" />
+      </Principal>
+      <Dependent Role="tbl_canjes">
+        <PropertyRef Name="idpremio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_localidad_tbl_paises">
+    <End Role="tbl_paises" Type="Self.tbl_paises" Multiplicity="1" />
+    <End Role="tbl_localidad" Type="Self.tbl_localidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_paises">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbl_localidad">
+        <PropertyRef Name="idpais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_premios_tbl_premios">
+    <End Role="tbl_campania" Type="Self.tbl_campania" Multiplicity="1" />
+    <End Role="tbl_premios" Type="Self.tbl_premios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_campania">
+        <PropertyRef Name="idcampania" />
+      </Principal>
+      <Dependent Role="tbl_premios">
+        <PropertyRef Name="idcampania" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_puntos_tbl_codigos">
+    <End Role="tbl_campania" Type="Self.tbl_campania" Multiplicity="1" />
+    <End Role="tbl_puntos" Type="Self.tbl_puntos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_campania">
+        <PropertyRef Name="idcampania" />
+      </Principal>
+      <Dependent Role="tbl_puntos">
+        <PropertyRef Name="idcampana" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_puntos_tbl_codigos1">
+    <End Role="tbl_codigos" Type="Self.tbl_codigos" Multiplicity="1" />
+    <End Role="tbl_puntos" Type="Self.tbl_puntos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_codigos">
+        <PropertyRef Name="idcodigo" />
+      </Principal>
+      <Dependent Role="tbl_puntos">
+        <PropertyRef Name="idcodigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_puntos_tbl_participantes">
+    <End Role="tbl_participantes" Type="Self.tbl_participantes" Multiplicity="1" />
+    <End Role="tbl_puntos" Type="Self.tbl_puntos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_participantes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbl_puntos">
+        <PropertyRef Name="idusr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="sp_insert_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usuario" Type="varchar" Mode="In" />
+    <Parameter Name="clave" Type="varchar" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="apellido" Type="varchar" Mode="In" />
+    <Parameter Name="r" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_registro_participantes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="apellidos" Type="varchar" Mode="In" />
+    <Parameter Name="dni" Type="varchar" Mode="In" />
+    <Parameter Name="email" Type="varchar" Mode="In" />
+    <Parameter Name="pais" Type="int" Mode="In" />
+    <Parameter Name="localidad" Type="int" Mode="In" />
+    <Parameter Name="clave" Type="varchar" Mode="In" />
+    <Parameter Name="r" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="sp_select_usuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="adminaspModelStoreContainer">
+    <EntitySet Name="tbl_campania" EntityType="Self.tbl_campania" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_canjes" EntityType="Self.tbl_canjes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_codigos" EntityType="Self.tbl_codigos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_localidad" EntityType="Self.tbl_localidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_paises" EntityType="Self.tbl_paises" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_participantes" EntityType="Self.tbl_participantes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_premios" EntityType="Self.tbl_premios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_productos" EntityType="Self.tbl_productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_puntos" EntityType="Self.tbl_puntos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tbl_canjes_tbl_campania" Association="Self.FK_tbl_canjes_tbl_campania">
+      <End Role="tbl_campania" EntitySet="tbl_campania" />
+      <End Role="tbl_canjes" EntitySet="tbl_canjes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_canjes_tbl_premios" Association="Self.FK_tbl_canjes_tbl_premios">
+      <End Role="tbl_premios" EntitySet="tbl_premios" />
+      <End Role="tbl_canjes" EntitySet="tbl_canjes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_localidad_tbl_paises" Association="Self.FK_tbl_localidad_tbl_paises">
+      <End Role="tbl_paises" EntitySet="tbl_paises" />
+      <End Role="tbl_localidad" EntitySet="tbl_localidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_premios_tbl_premios" Association="Self.FK_tbl_premios_tbl_premios">
+      <End Role="tbl_campania" EntitySet="tbl_campania" />
+      <End Role="tbl_premios" EntitySet="tbl_premios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_puntos_tbl_codigos" Association="Self.FK_tbl_puntos_tbl_codigos">
+      <End Role="tbl_campania" EntitySet="tbl_campania" />
+      <End Role="tbl_puntos" EntitySet="tbl_puntos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_puntos_tbl_codigos1" Association="Self.FK_tbl_puntos_tbl_codigos1">
+      <End Role="tbl_codigos" EntitySet="tbl_codigos" />
+      <End Role="tbl_puntos" EntitySet="tbl_puntos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_puntos_tbl_participantes" Association="Self.FK_tbl_puntos_tbl_participantes">
+      <End Role="tbl_participantes" EntitySet="tbl_participantes" />
+      <End Role="tbl_puntos" EntitySet="tbl_puntos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

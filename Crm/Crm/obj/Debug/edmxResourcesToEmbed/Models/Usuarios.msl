@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="adminaspModelStoreContainer" CdmEntityContainer="adminaspEntities">
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="adminaspModel.usuario">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="idusr" ColumnName="idusr" />
+          <ScalarProperty Name="usuario1" ColumnName="usuario" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+          <ScalarProperty Name="fechaderegistro" ColumnName="fechaderegistro" />
+          <ScalarProperty Name="LoginErrorMessage" ColumnName="LoginErrorMessage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

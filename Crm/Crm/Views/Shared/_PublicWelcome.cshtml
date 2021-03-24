@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" href="~/Content/assets/css/swiper.min.css">
+    <link rel="stylesheet" href="~/Content/assets/css/style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <nav id="menu">
+            <div class="width">
+                <div class="left">
+                    <div class="imagen">
+                        <img src="~/Content/assets/images/higiene_white.png" alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="options">
+                        <div class="item">
+                            <a href="" class="">
+                                <img src="~/Content/assets/images/facebook.png" alt="">
+                            </a>
+                        </div>
+                        <div class="item lang">
+                            <a href="" class="peru">
+                                <img src="~/Content/assets/images/lang/peru.png" alt="">
+                            </a>
+
+                        </div>
+                        <div class="item ">
+                            <a href="#" class="btn-menu">
+                                <img src="~/Content/assets/images/settings.png" alt="">
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                @Html.Partial("_PublicMenuProfile")
+            </div>
+        </nav>
+
+        <header id="header">
+            <div class="width">
+
+                <div class="user">
+                    <div class="display">
+                        <img src="~/Content/assets/images/user.png" alt="">
+                    </div>
+                    <div class="content">
+                        Bienvenido Raúl
+                    </div>
+                </div>
+
+                <div class="logo">
+                    <a href="">
+                        <img src="~/Content/assets/images/logo.png" alt="">
+                    </a>
+                </div>
+
+                <!--
+                    <div class="awards">
+                        <div class="codes">
+                            <a href="#code" class="modaLink">
+                                Ingresa tus códigos
+                            </a>
+                        </div>
+                        <div class="points">
+                            <span>
+                                Puntos: 50
+                            </span>
+                        </div>
+                    </div>
+                -->
+            </div>
+        </header>
+
+        <section id="wrapper">
+            <div class="width">
+                @RenderBody()                
+            </div>
+        </section>
+
+    </main>
+    @Html.Partial("_PublicFooter")
+   
+    <script src="~/Content/assets/js/jquery.min.js"></script>
+    <script src="~/Content/assets/js/swiper.min.js"></script>
+    <script src="~/Content/assets/js/jquery.form.js"></script>
+    <script src="~/Content/assets/js/jquery.validate.min.js"></script>
+    <script src="~/Content/assets/js/jquery.custom.js"></script>
+
+</body>
+</html>

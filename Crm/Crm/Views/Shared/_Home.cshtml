@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="~/Content/assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="~/Content/assets/css/swiper.min.css">
+    <link rel="stylesheet" href="~/Content/assets/css/style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <nav id="menu">
+            <div class="width">
+
+                <div class="imagen">
+                    <img src="~/Content/assets/images/higiene_white.png" alt="">
+                </div>
+
+                <div class="options">
+                    <div class="item">
+                        <a href="" target="_blank">
+                            <img src="~/Content/assets/images/facebook.png" alt="">
+                        </a>
+                    </div>
+                    <div class="item lang">
+                        <a href="" class="peru">
+                            <img src="~/Content/assets/images/lang/peru.png" alt="">
+                        </a>
+
+                        <div class="dropdown">
+                            <div class="breadcrumb">
+                                <span class="these">Estás en:</span>
+                                <span class="country">Perú</span>
+                            </div>
+                            <ul>
+                                <!-- <li> -->
+                                <!-- <a href=""> -->
+                                <!-- <span class="icon master"></span> -->
+                                <!-- <span class="name">Master</span> -->
+                                <!-- </a> -->
+                                <!-- </li> -->
+                                <li>
+                                    <a href="">
+                                        <span class="icon argentina"></span>
+                                        <span class="name">Argentina</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="icon colombia"></span>
+                                        <span class="name">Colombia</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="icon mexico"></span>
+                                        <span class="name">México</span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="">
+                                        <span class="icon peru"></span>
+                                        <span class="name">Perú</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        <section id="wrapper">
+            <div class="width">
+                @RenderBody()
+            </div>
+        </section>
+       
+        <footer id="footer">
+            <div class="content">
+                <div class="width">
+                    Para más información acerca de las marcas de Kimberly-Clark, visite el website de Kimberly-Clark Worldwide, Inc. Todos los nombres, logos, marcas y/o propiedad intelectual registrado son propiedad de <br>
+                    Kymberly-Clark Worldwide, Inc. y/o sus afiliados. Copyright 2016 Kimberly-Clark Worldwide. Inc. Todos los derechos reservados. Su visita a este sitio y el uso de la información aquí presentada está sujeta a los <br>
+                    <a href="#terminos" class="link modaLink">Términos y condiciones contenidos</a> en el aviso de privacidad. Por favor, léala, así como también nuestra <a href="#politicas" class="link modaLink">política de tratamiento de datos personales.</a>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+
+    <script src="~/Content/assets/js/jquery.min.js"></script>
+    <script src="~/Content/assets/js/swiper.min.js"></script>
+    <script src="~/Content/assets/js/jquery.form.js"></script>
+    <script src="~/Content/assets/js/jquery.validate.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+    <script src="~/Content/assets/js/jquery.custom.js"></script>
+
+</body>
+
+
+
+</html>

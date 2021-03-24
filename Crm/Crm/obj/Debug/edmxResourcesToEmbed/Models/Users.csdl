@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="adminaspModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_campania">
+    <Key>
+      <PropertyRef Name="idcampania" />
+    </Key>
+    <Property Name="idcampania" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idpais" Type="Int32" Nullable="false" />
+    <Property Name="idlocalidad" Type="Int32" Nullable="false" />
+    <Property Name="tipo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="own" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="bannerdesktop" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="bannermobile" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="resumen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="preguntasf" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="video" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="sorteoganadores" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="sorteofechas" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="mensaje" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="terminoscond" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="politicasuso" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="politicasprivacidad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="politicatratdatos" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="productos" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="fregistro" Type="DateTime" Precision="3" />
+    <Property Name="fupdate" Type="DateTime" Precision="3" />
+    <Property Name="fini" Type="DateTime" Precision="3" />
+    <Property Name="ffin" Type="DateTime" Precision="3" />
+    <Property Name="estatus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tbl_canjes" Relationship="Self.FK_tbl_canjes_tbl_campania" FromRole="tbl_campania" ToRole="tbl_canjes" />
+    <NavigationProperty Name="tbl_premios" Relationship="Self.FK_tbl_premios_tbl_premios" FromRole="tbl_campania" ToRole="tbl_premios" />
+    <NavigationProperty Name="tbl_puntos" Relationship="Self.FK_tbl_puntos_tbl_codigos" FromRole="tbl_campania" ToRole="tbl_puntos" />
+  </EntityType>
+  <EntityType Name="tbl_canjes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="idcampana" Type="Int32" Nullable="false" />
+    <Property Name="idpremio" Type="Int32" Nullable="false" />
+    <Property Name="puntos" Type="Int32" Nullable="false" />
+    <Property Name="registro" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="tbl_campania" Relationship="Self.FK_tbl_canjes_tbl_campania" FromRole="tbl_canjes" ToRole="tbl_campania" />
+    <NavigationProperty Name="tbl_premios" Relationship="Self.FK_tbl_canjes_tbl_premios" FromRole="tbl_canjes" ToRole="tbl_premios" />
+  </EntityType>
+  <EntityType Name="tbl_codigos">
+    <Key>
+      <PropertyRef Name="idcodigo" />
+    </Key>
+    <Property Name="idcodigo" Type="Int32" Nullable="false" />
+    <Property Name="codigo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="puntos" Type="Int32" Nullable="false" />
+    <Property Name="registro" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_puntos" Relationship="Self.FK_tbl_puntos_tbl_codigos1" FromRole="tbl_codigos" ToRole="tbl_puntos" />
+  </EntityType>
+  <EntityType Name="tbl_localidad">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="idpais" Type="Int32" Nullable="false" />
+    <Property Name="localidad" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tbl_paises" Relationship="Self.FK_tbl_localidad_tbl_paises" FromRole="tbl_localidad" ToRole="tbl_paises" />
+  </EntityType>
+  <EntityType Name="tbl_paises">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="pais" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tbl_localidad" Relationship="Self.FK_tbl_localidad_tbl_paises" FromRole="tbl_paises" ToRole="tbl_localidad" />
+  </EntityType>
+  <EntityType Name="tbl_participantes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellidos" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dni" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="clave" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="imagen" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pais" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="localidad" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="puntos" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="registro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="estatus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tbl_puntos" Relationship="Self.FK_tbl_puntos_tbl_participantes" FromRole="tbl_participantes" ToRole="tbl_puntos" />
+  </EntityType>
+  <EntityType Name="tbl_premios">
+    <Key>
+      <PropertyRef Name="idpremios" />
+    </Key>
+    <Property Name="idpremios" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idcampania" Type="Int32" Nullable="false" />
+    <Property Name="imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="detalle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="puntaje" Type="Int32" />
+    <Property Name="stock" Type="Int32" />
+    <Property Name="registro" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbl_campania" Relationship="Self.FK_tbl_premios_tbl_premios" FromRole="tbl_premios" ToRole="tbl_campania" />
+    <NavigationProperty Name="tbl_canjes" Relationship="Self.FK_tbl_canjes_tbl_premios" FromRole="tbl_premios" ToRole="tbl_canjes" />
+  </EntityType>
+  <EntityType Name="tbl_productos">
+    <Key>
+      <PropertyRef Name="idprod" />
+    </Key>
+    <Property Name="idprod" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoria" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="detalles" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="registro" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbl_puntos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="idcampana" Type="Int32" Nullable="false" />
+    <Property Name="idusr" Type="Int32" Nullable="false" />
+    <Property Name="idcodigo" Type="Int32" Nullable="false" />
+    <Property Name="puntos" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ownr" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="registro" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="tbl_campania" Relationship="Self.FK_tbl_puntos_tbl_codigos" FromRole="tbl_puntos" ToRole="tbl_campania" />
+    <NavigationProperty Name="tbl_codigos" Relationship="Self.FK_tbl_puntos_tbl_codigos1" FromRole="tbl_puntos" ToRole="tbl_codigos" />
+    <NavigationProperty Name="tbl_participantes" Relationship="Self.FK_tbl_puntos_tbl_participantes" FromRole="tbl_puntos" ToRole="tbl_participantes" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="idusr" />
+    </Key>
+    <Property Name="idusr" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usuario1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="clave" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="rol" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaderegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LoginErrorMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="imagen" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="pais" Type="Int32" />
+    <Property Name="estatus" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_tbl_canjes_tbl_campania">
+    <End Role="tbl_campania" Type="Self.tbl_campania" Multiplicity="1" />
+    <End Role="tbl_canjes" Type="Self.tbl_canjes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_campania">
+        <PropertyRef Name="idcampania" />
+      </Principal>
+      <Dependent Role="tbl_canjes">
+        <PropertyRef Name="idcampana" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_premios_tbl_premios">
+    <End Role="tbl_campania" Type="Self.tbl_campania" Multiplicity="1" />
+    <End Role="tbl_premios" Type="Self.tbl_premios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_campania">
+        <PropertyRef Name="idcampania" />
+      </Principal>
+      <Dependent Role="tbl_premios">
+        <PropertyRef Name="idcampania" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_puntos_tbl_codigos">
+    <End Role="tbl_campania" Type="Self.tbl_campania" Multiplicity="1" />
+    <End Role="tbl_puntos" Type="Self.tbl_puntos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_campania">
+        <PropertyRef Name="idcampania" />
+      </Principal>
+      <Dependent Role="tbl_puntos">
+        <PropertyRef Name="idcampana" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_canjes_tbl_premios">
+    <End Role="tbl_premios" Type="Self.tbl_premios" Multiplicity="1" />
+    <End Role="tbl_canjes" Type="Self.tbl_canjes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_premios">
+        <PropertyRef Name="idpremios" />
+      </Principal>
+      <Dependent Role="tbl_canjes">
+        <PropertyRef Name="idpremio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_puntos_tbl_codigos1">
+    <End Role="tbl_codigos" Type="Self.tbl_codigos" Multiplicity="1" />
+    <End Role="tbl_puntos" Type="Self.tbl_puntos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_codigos">
+        <PropertyRef Name="idcodigo" />
+      </Principal>
+      <Dependent Role="tbl_puntos">
+        <PropertyRef Name="idcodigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_localidad_tbl_paises">
+    <End Role="tbl_paises" Type="Self.tbl_paises" Multiplicity="1" />
+    <End Role="tbl_localidad" Type="Self.tbl_localidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_paises">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbl_localidad">
+        <PropertyRef Name="idpais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_puntos_tbl_participantes">
+    <End Role="tbl_participantes" Type="Self.tbl_participantes" Multiplicity="1" />
+    <End Role="tbl_puntos" Type="Self.tbl_puntos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_participantes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbl_puntos">
+        <PropertyRef Name="idusr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="UsersEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_campania" EntityType="Self.tbl_campania" />
+    <EntitySet Name="tbl_canjes" EntityType="Self.tbl_canjes" />
+    <EntitySet Name="tbl_codigos" EntityType="Self.tbl_codigos" />
+    <EntitySet Name="tbl_localidad" EntityType="Self.tbl_localidad" />
+    <EntitySet Name="tbl_paises" EntityType="Self.tbl_paises" />
+    <EntitySet Name="tbl_participantes" EntityType="Self.tbl_participantes" />
+    <EntitySet Name="tbl_premios" EntityType="Self.tbl_premios" />
+    <EntitySet Name="tbl_productos" EntityType="Self.tbl_productos" />
+    <EntitySet Name="tbl_puntos" EntityType="Self.tbl_puntos" />
+    <EntitySet Name="usuarios" EntityType="Self.usuario" />
+    <AssociationSet Name="FK_tbl_canjes_tbl_campania" Association="Self.FK_tbl_canjes_tbl_campania">
+      <End Role="tbl_campania" EntitySet="tbl_campania" />
+      <End Role="tbl_canjes" EntitySet="tbl_canjes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_premios_tbl_premios" Association="Self.FK_tbl_premios_tbl_premios">
+      <End Role="tbl_campania" EntitySet="tbl_campania" />
+      <End Role="tbl_premios" EntitySet="tbl_premios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_puntos_tbl_codigos" Association="Self.FK_tbl_puntos_tbl_codigos">
+      <End Role="tbl_campania" EntitySet="tbl_campania" />
+      <End Role="tbl_puntos" EntitySet="tbl_puntos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_canjes_tbl_premios" Association="Self.FK_tbl_canjes_tbl_premios">
+      <End Role="tbl_premios" EntitySet="tbl_premios" />
+      <End Role="tbl_canjes" EntitySet="tbl_canjes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_puntos_tbl_codigos1" Association="Self.FK_tbl_puntos_tbl_codigos1">
+      <End Role="tbl_codigos" EntitySet="tbl_codigos" />
+      <End Role="tbl_puntos" EntitySet="tbl_puntos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_localidad_tbl_paises" Association="Self.FK_tbl_localidad_tbl_paises">
+      <End Role="tbl_paises" EntitySet="tbl_paises" />
+      <End Role="tbl_localidad" EntitySet="tbl_localidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_puntos_tbl_participantes" Association="Self.FK_tbl_puntos_tbl_participantes">
+      <End Role="tbl_participantes" EntitySet="tbl_participantes" />
+      <End Role="tbl_puntos" EntitySet="tbl_puntos" />
+    </AssociationSet>
+    <FunctionImport Name="sp_insert_usuario">
+      <Parameter Name="usuario" Mode="In" Type="String" />
+      <Parameter Name="clave" Mode="In" Type="String" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="apellido" Mode="In" Type="String" />
+      <Parameter Name="r" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_select_usuarios" ReturnType="Collection(adminaspModel.sp_select_usuarios_Result)" />
+    <FunctionImport Name="sp_registro_participantes">
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="apellidos" Mode="In" Type="String" />
+      <Parameter Name="dni" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="pais" Mode="In" Type="Int32" />
+      <Parameter Name="localidad" Mode="In" Type="Int32" />
+      <Parameter Name="clave" Mode="In" Type="String" />
+      <Parameter Name="r" Mode="InOut" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_select_usuarios_Result">
+    <Property Type="Int64" Name="idusr" Nullable="false" />
+    <Property Type="String" Name="usuario" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="clave" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="apellido" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="rol" Nullable="false" MaxLength="250" />
+    <Property Type="DateTime" Name="fechaderegistro" Nullable="false" Precision="23" />
+    <Property Type="String" Name="LoginErrorMessage" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="imagen" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="pais" Nullable="true" />
+    <Property Type="String" Name="estatus" Nullable="true" MaxLength="250" />
+  </ComplexType>
+</Schema>
